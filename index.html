@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator - Video & Image Generation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>AI Creator</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Ideas Into Reality</h1>
+            <p>Generate stunning videos and images using AI technology</p>
+            <div class="creator-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="image">Image Generation</button>
+                    <button class="tab-btn" data-tab="video">Video Generation</button>
+                </div>
+                <div class="prompt-container">
+<!-- <div class="prompt-container">
+    <textarea id="prompt" placeholder="Describe what you want to create..."></textarea>
+    <div class="options">
+        <select id="style-select" class="style-select">
+            <option value="">Select Style</option>
+            <option value="realistic">Realistic</option>
+            <option value="artistic">Artistic</option>
+            <option value="cartoon">Cartoon</option>
+            <option value="3d">3D</option>
+        </select>
+        <select id="ratio-select" class="ratio-select">
+            <option value="">Select Ratio</option>
+            <option value="1:1">1:1</option>
+            <option value="16:9">16:9</option>
+            <option value="4:3Since there is no selected code, I will provide a code snippet that can be inserted to improve the existing code. Here's a JavaScript code that can be added to the HTML file to make the tabs functional:
+
+```javascript
+// Get the tab buttons
+const tabButtons = document.querySelectorAll('.tab-btn');
+
+// Get the prompt container
+const promptContainer = document.querySelector('.prompt-container');
+
+// Add event listener to each tab button
+tabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Remove active class from all tab buttons
+    tabButtons.forEach((btn) => btn.classList.remove('active'));
+
+    // Add active class to the clicked tab button
+    button.classList.add('active');
+
+    // Get the data-tab attribute of the clicked tab button
+    const tab = button.getAttribute('data-tab');
+
+    // Show the corresponding prompt container
+    if (tab === 'image') {
+      promptContainer.innerHTML = `
+        <textarea id="prompt" placeholder="Describe what you want to create..."></textarea>
+        <div class="options">
+          <select id="style-select" class="style-select">
+            <option value="">Select Style</option>
+            <option value="realistic">Realistic</option>
+            <option value="artistic">Artistic</option>
+            <option value="cartoon">Cartoon</option>
+            <option value="3d">3D</option>
+          </select>
+          <select id="ratio-select" class="ratio-select">
+            <option value="">Select Ratio</option>
+            <option value="1:1">1:1</option>
+            <option value="16:9">16:9</option>
+            <option value="4:3">4:3</option>
+            <option value="9:16">9:16</option>
+          </select>
+        </div>
+        <button id="generate-btn" class="generate-btn">
+          <i class="fas fa-magic"></i>
+          Generate
+        </button>
+        <div id="generation-result" class="generation-result"></div>
+      `;
+    } else if (tab === 'video') {
+      promptContainer.innerHTML = `
+        <textarea id="prompt" placeholder="Describe what you want to create..."></textarea>
+        <div class="options">
+          <select id="style-select" class="style-select">
+            <option value="">Select Style</option>
+            <option value="realistic">Realistic</option>
+            <option value="artistic">Artistic</option>
+            <option value="cartoon">Cartoon</option>
+            <option value="3d">3D</option>
+          </select>
+          <select id="ratio-select" class="ratio-select">
+            <option value="">Select Ratio</option>
+            <option value="1:1">1:1</option>
+            <option value="16:9">16:9</option>
+            <option value="4:3">4:3</option>
+            <option value="9:16">9:16</option>
+          </select>
+          <select id="duration-select" class="duration-select">
+            <option value="">Select Duration</option>
+            <option value="15">15 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="60">1 minute</option>
+          </select>
+        </div>
+        <button id="generate-btn" class="generate-btn">
+          <i class="fas fa-magic"></i>
+          Generate
+        </button>
+        <div id="generation-result" class="generation-result"></div>
+      `;
+    }
+  });
+});
+```
+
+This code adds an event listener to each tab button. When a tab button is clicked, it removes the active class from all tab buttons, adds the active class to the clicked tab button, and shows the corresponding prompt container. The prompt container for the image tab is shown by default.on>
+            <option value="9:16">9:16</option>
+        </select>
+    </div>
+    <button id="generate-btn" class="generate-btn">
+        <i class="fas fa-magic"></i>
+        Generate
+    </button>
+    <div id="generation-result" class="generation-result"></div> -->
+</div>
+                    <textarea placeholder="Describe what you want to create..."></textarea>
+                    <div class="options">
+                        <select class="style-select">
+                            <option value="">Select Style</option>
+                            <option value="realistic">Realistic</option>
+                            <option value="artistic">Artistic</option>
+                            <option value="cartoon">Cartoon</option>
+                            <option value="3d">3D</option>
+                        </select>
+                        <select class="ratio-select">
+                            <option value="">Select Ratio</option>
+                            <option value="1:1">1:1</option>
+                            <option value="16:9">16:9</option>
+                            <option value="4:3">4:3</option>
+                            <option value="9:16">9:16</option>
+                        </select>
+                    </div>
+                    <button class="generate-btn">
+                        <i class="fas fa-magic"></i>
+                        Generate
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Generation</h3>
+                <p>Generate high-quality content in seconds</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-palette"></i>
+                <h3>Multiple Styles</h3>
+                <p>Choose from various artistic styles</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-download"></i>
+                <h3>Easy Export</h3>
+                <p>Download in multiple formats</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Generation</h3>
+                <p>Create content anytime, anywhere</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Generated Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery items will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="price">$0</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> 5 generations per day</li>
+                    <li><i class="fas fa-check"></i> Basic styles</li>
+                    <li><i class="fas fa-check"></i> Standard quality</li>
+                </ul>
+                <button class="pricing-btn">Start Free</button>
+            </div>
+            <div class="pricing-card popular">
+                <h3>Pro</h3>
+                <div class="price">$19</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> 100 generations per day</li>
+                    <li><i class="fas fa-check"></i> All styles</li>
+                    <li><i class="fas fa-check"></i> HD quality</li>
+                    <li><i class="fas fa-check"></i> Priority generation</li>
+                </ul>
+                <button class="pricing-btn">Get Pro</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">$49</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Unlimited generations</li>
+                    <li><i class="fas fa-check"></i> Custom styles</li>
+                    <li><i class="fas fa-check"></i> 4K quality</li>
+                    <li><i class="fas fa-check"></i> API access</li>
+                </ul>
+                <button class="pricing-btn">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Creator</h4>
+                <p>Transform your ideas into stunning visuals with AI technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@aicreator.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Creator. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
